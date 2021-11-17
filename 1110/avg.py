@@ -5,6 +5,7 @@ with open(DATA_FILENAME, 'r', encoding='utf-8') as f:
     for line in f:
         person_data.append(line.strip().split(','))
 
+
 col = 1
 avg = [0] * len(title)
 while col < len(title):
