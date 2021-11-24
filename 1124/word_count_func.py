@@ -1,10 +1,9 @@
-DATA_FILENAME='word_list.txt'
+DATA_FILENAME='sentence.txt'
 
 word_dic = {}
-with open(DATA_FILENAME) as f:          #空の辞書を作成
-    #word_dic = {}                      #ここに書いてもいい
+with open(DATA_FILENAME) as f:          
     for word in f:
-        word = word.strip()             #改行コードを取り除く
+        word = word.strip()
         if word in word_dic:            #辞書のキーに単語が存在するのか
         #if word in word_dic.keys():    #別の書き方
             word_dic[word] += 1         #カウントアップ
@@ -12,6 +11,3 @@ with open(DATA_FILENAME) as f:          #空の辞書を作成
             word_dic[word] = 1          #初めての単語なので初期値は１
 
 print(word_dic)
-
-for word in sorted(word_dic):
-    print(f'{word:}:{word_dic[word]}')
